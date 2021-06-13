@@ -20,16 +20,14 @@ function getUser()
 
   return myUser;
 }
-function getUsersArray(n)
+function getUsersArray(number_User)
 {
-    var  userArray = new Array(n);
-      for(var i=0;i<n;i++){
-             userArray.push(getUser());
-      }
+    var  userArray = new Array(number_User).fill(getUser());
+      
   return userArray ;
 }
 
-getUsersArray(10).forEach(function(elemento,indice,Array){
+getUsersArray(2).forEach(function(elemento,indice,Array){
 console.log(elemento,indice);
 });
 
