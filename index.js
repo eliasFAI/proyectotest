@@ -22,15 +22,15 @@ function getUser()
 }
 function getUsersArray(n)
 {
-    var  userArray =[] ;
-    for (i=0 ; i<n ; i++) {
-
-         userArray[i] = getUser();
-        
+    var  userArray = new Array(n);
+      for(var i=0;i<n;i++){
+             userArray.push(getUser());
       }
   return userArray ;
 }
 
-var list = getUsersArray(10);
-console.log(list[0]);
+getUsersArray(10).forEach(function(elemento,indice,Array){
+console.log(elemento,indice);
+});
+
 
